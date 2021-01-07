@@ -90,7 +90,7 @@ body {
 }
 
 .testimony-experience {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 600;
   margin-bottom: 20px;
   margin-top: 20px;
@@ -100,8 +100,8 @@ body {
 @media screen and (min-width: 1440px) {
   .main {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(4, minmax(220px, 1fr));
+    grid-template-rows: 283px 261px;
     padding: 136px 370px;
     column-gap: 20px;
     row-gap: 20px;
@@ -111,15 +111,14 @@ body {
   }
 
   .card-content {
-    /* border: 1px solid; */
-    padding: 30px 34px;
+    padding: 30px 25px;
     width: 100%;
     height: 100%;
+    margin: 0;
   }
 
   .daniel {
     grid-column: 1 / span 2;
-    /* grid-row: 1 / span 1; */
   }
 
   .patrick {
@@ -128,6 +127,6 @@ body {
 
   .kira {
     grid-column: 4;
-    grid-row: 1 / span 3;
+    grid-row: 1 / span 2;
   }
 }
