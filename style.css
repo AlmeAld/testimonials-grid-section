@@ -18,7 +18,6 @@
 body {
   font-size: 13px;
   font-family: "Barlow Semi Condensed", sans-serif;
-  background-color: var(--light-blue);
 }
 
 .attribution {
@@ -31,17 +30,20 @@ body {
 
 /* mobile */
 /* @media (max-width: 375px) { */
-.main {
-  padding: 30px 15px 0px;
+.container {
+  background-color: var(--light-blue);
 }
-.card-content {
+.main {
+  padding: 30px 15px 1px;
+}
+.card {
   /* border: 1px solid; */
   border-radius: 8px;
   margin-bottom: 35px;
   padding: 30px 34px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
-.daniel {
+.card-violet {
   color: var(--white);
   background-color: var(--violet);
   background-image: url(./images/bg-pattern-quotation.svg);
@@ -50,46 +52,41 @@ body {
   background-size: 112px;
 }
 
-.jonathan {
+.card-gray {
   background-color: var(--grayish-blue);
   color: var(--white);
 }
 
-.jeanette {
+.card-white {
   background-color: var(--white);
   color: var(--grayish-blue);
 }
 
-.patrick {
+.card-black {
   background-color: var(--blackish-blue);
   color: var(--white);
 }
 
-.kira {
-  background-color: var(--white);
-  color: var(--grayish-blue);
-}
-
-.card__header {
+.card--header {
   display: flex;
 }
 
-.card__header img {
+.card--header img {
   width: 40px;
   border-radius: 50px;
   margin-right: 20px;
 }
 
-.verified {
+.card--header-verified {
   opacity: 0.5;
 }
 
-.testimony {
+.card-testimony {
   opacity: 0.7;
   font-weight: 500;
 }
 
-.testimony-experience {
+.card-experience {
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 20px;
@@ -98,30 +95,30 @@ body {
 /* } */
 
 @media screen and (min-width: 1440px) {
+  .wrapper {
+    max-width: 1072px;
+    margin: auto;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+  }
   .main {
     display: grid;
     grid-template-columns: repeat(4, minmax(220px, 1fr));
     grid-template-rows: 283px 261px;
-    padding: 136px 370px;
-    column-gap: 20px;
-    row-gap: 20px;
-    height: 100vh;
-    /* align-items: center; */
-    /* justify-content: center; */
+    gap: 20px;
   }
 
-  .card-content {
+  .card {
     padding: 30px 25px;
-    width: 100%;
-    height: 100%;
     margin: 0;
   }
 
-  .daniel {
+  .card-violet {
     grid-column: 1 / span 2;
   }
 
-  .patrick {
+  .card-black {
     grid-column: 2 / span 2;
   }
 
